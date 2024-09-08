@@ -4,4 +4,5 @@ export interface Repository {
     description: string,
     language: string,
     forks_count: number
+    created_at: Date;
 }
