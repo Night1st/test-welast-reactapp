@@ -43,9 +43,9 @@ const RepositoryList = () => {
   }
   
   return (
-      <div>
+    <div className="container">
       <h1>GitHub Repositories</h1>
-      <div>
+      <div className="language">
         {languages.map(language => (
           <button key={language} onClick={() => handleFilterByLanguage(language)}>
               {language}
@@ -55,7 +55,7 @@ const RepositoryList = () => {
       <ul>
         {filteredRepos.map(repo => (
           <li key={repo.id}>
-            <h2>Name: {repo.name}</h2>
+            <h2>{repo.name}</h2>
             <p>Description: {repo.description}</p>
             <p>Language: {repo.language}</p>
             <p>Forks: {repo.forks_count}</p>
